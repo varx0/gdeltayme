@@ -31,6 +31,8 @@ namespace gayme
                 Console.WriteLine($"{i++}");
             };
 
+            Window.CenterWindow();
+
             Window.Run();
         }
 

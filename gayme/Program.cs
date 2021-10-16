@@ -1,6 +1,7 @@
 ﻿using System;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Mathematics;
+using OpenTK.Windowing.Common;
 
 namespace gayme
 {
@@ -21,7 +22,7 @@ namespace gayme
 
             GameWindow Window = new GameWindow(GWS, NWS);
 
-            Window.CenterWindow();
+           
 
             Window.Run();
         }

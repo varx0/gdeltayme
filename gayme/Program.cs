@@ -1,13 +1,15 @@
 ﻿using System;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Mathematics;
+using OpenTK.Windowing.Common;
 
 namespace gayme
 {
     public class Program
     {   
         public static void Main(string[] args)
-        {
+        {   
+            // Window Properties
             GameWindowSettings GWS = GameWindowSettings.Default;
             NativeWindowSettings NWS = NativeWindowSettings.Default;
 
@@ -20,6 +22,14 @@ namespace gayme
             NWS.Title = "Fuck you Jeff Bezos!";
 
             GameWindow Window = new GameWindow(GWS, NWS);
+
+            // Update Frame
+            int i = 0;
+
+            Window.UpdateFrame += (FrameEventArgs args) =>
+            {
+                Console.WriteLine($"{i++}");
+            };
 
             Window.Run();
         }

@@ -21,7 +21,10 @@ namespace gayme
 
             GameWindow Window = new GameWindow(GWS, NWS);
 
+            Window.CenterWindow();
+
             Window.Run();
         }
+
     }
 }

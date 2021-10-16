@@ -32,9 +32,7 @@ namespace gayme
             };
 
             Window.CenterWindow();
-
             Window.Run();
         }
-
     }
 }

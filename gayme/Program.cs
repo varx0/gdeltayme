@@ -1,4 +1,7 @@
 ﻿using System;
+using OpenTK.Windowing.Desktop;
+using OpenTK.Mathematics;
+
 
 namespace gayme
 {
@@ -6,7 +9,16 @@ namespace gayme
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
+                GameWindowSettings GWS = GameWindowSettings.Default;
+                NativeWindowSettings NWS = NativeWindowSettings.Default;
+
+                GameWindow Window = new GameWindow(GWS, NWS);
+
+                Window.Run();
         }
     }
 }
+
+    
+
